@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         >
           <strong className="m-1 flex-none font-bold">Hello!</strong>
           <span className="m-1 flex-1 block sm:inline">This is a test with Tailwind</span>
-          <button className="m-1 flex-none btn btn-green">OK</button>
+          <button className={`m-1 flex-none ${styles.btn} ${styles.btnGreen}`}>OK</button>
         </div>
       </div>
     </div>
