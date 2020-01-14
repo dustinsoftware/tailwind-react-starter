@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="flex mb-4">
+      <div className="w-full">
+        <div
+          className="max-w-md bg-white shadow-xl border border-green-400 text-green-700 px-4 py-3 rounded relative flex items-center"
+          role="alert"
         >
-          Learn React
-        </a>
-      </header>
+          <strong className="m-1 flex-none font-bold">Hello!</strong>
+          <span className="m-1 flex-1 block sm:inline">This is a test with Tailwind</span>
+          <button className="m-1 flex-none btn btn-green">OK</button>
+        </div>
+      </div>
     </div>
   );
 }
