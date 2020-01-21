@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css'
 import * as serviceWorker from './serviceWorker';
+import { makeServer } from './mirage-setup';
+
+if (window.location.hostname === 'localhost') {
+  makeServer();
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
