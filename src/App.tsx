@@ -35,6 +35,7 @@ function App() {
           </span>
           <button
             onClick={createUser}
+            data-testid="ok-button"
             className={`m-1 flex-none ${styles.btn} ${styles.btnGreen}`}
           >
             OK

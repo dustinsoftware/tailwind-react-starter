@@ -6,7 +6,8 @@ import { makeServer } from './mirage-setup';
 let server = undefined;
 
 beforeEach(() => {
-	server = makeServer();
+  server = makeServer();
+  server.logging = false;
 });
 
 afterEach(() => {
@@ -19,10 +20,19 @@ test('renders learn react link', () => {
 	expect(linkElement).toBeInTheDocument();
 });
 
-test('makes an async request', () => {
+test('makes an async request', async () => {
   const { getByTestId } = render(<App />);
-  wait(() => {
+  await wait(() => {
     const users = getByTestId('users');
-    expect(users).toHaveTextContent('Users: 2');
+    expect(users).toHaveTextContent('Users: [{"name":"Bob","id":"1"},{"name":"Alice","id":"2"}]');
+  });
+});
+
+test('adds a user', async () => {
+  const { getByTestId } = render(<App />);
+  getByTestId('ok-button').click();
+  await wait(() => {
+    const users = getByTestId('users');
+    expect(users).toHaveTextContent('Users: [{"name":"Bob","id":"1"},{"name":"Alice","id":"2"},{"name":"Tester!","id":"3"}]');
   });
 });
