@@ -12,10 +12,10 @@ export function makeServer() {
       this.namespace = 'api';
       this.get('/users', schema => {
         return schema.users.all();
-	  });
-	  this.post('/createUser', schema => {
-		  schema.users.create({ name: 'Tester!' });
-	  })
+      });
+      this.post('/createUser', schema => {
+        schema.users.create({ name: 'Tester!' });
+      });
     }
   });
 

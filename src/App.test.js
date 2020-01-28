@@ -15,16 +15,18 @@ afterEach(() => {
 });
 
 test('renders learn react link', () => {
-	const { getByText } = render(<App />);
-	const linkElement = getByText(/Hello!/i);
-	expect(linkElement).toBeInTheDocument();
+  const { getByText } = render(<App />);
+  const linkElement = getByText(/Hello!/i);
+  expect(linkElement).toBeInTheDocument();
 });
 
 test('makes an async request', async () => {
   const { getByTestId } = render(<App />);
   await wait(() => {
     const users = getByTestId('users');
-    expect(users).toHaveTextContent('Users: [{"name":"Bob","id":"1"},{"name":"Alice","id":"2"}]');
+    expect(users).toHaveTextContent(
+      'Users: [{"name":"Bob","id":"1"},{"name":"Alice","id":"2"}]'
+    );
   });
 });
 
@@ -33,6 +35,8 @@ test('adds a user', async () => {
   getByTestId('ok-button').click();
   await wait(() => {
     const users = getByTestId('users');
-    expect(users).toHaveTextContent('Users: [{"name":"Bob","id":"1"},{"name":"Alice","id":"2"},{"name":"Tester!","id":"3"}]');
+    expect(users).toHaveTextContent(
+      'Users: [{"name":"Bob","id":"1"},{"name":"Alice","id":"2"},{"name":"Tester!","id":"3"}]'
+    );
   });
 });
