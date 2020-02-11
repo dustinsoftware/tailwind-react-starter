@@ -15,7 +15,7 @@
     "husky": ">=4",
     "lint-staged": ">=10",
     "miragejs": "^0.1.33",
-    "olo-react-scripts": "^0.0.2",
+    "olo-react-scripts": "^0.0.4",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
     "prettier": "1.19.1",
@@ -30,6 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:dev": "REACT_APP_OLO_DEVELOPMENT=true react-scripts build",
     "test": "react-scripts test"
   },
   "eslintConfig": {

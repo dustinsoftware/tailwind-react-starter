@@ -7609,10 +7609,10 @@ obuf@^1.0.0, obuf@^1.1.2:
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
   integrity sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==
 
-olo-react-scripts@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/olo-react-scripts/-/olo-react-scripts-0.0.2.tgz#fbb30b437d95fc53a852a05418824c017ebd3541"
-  integrity sha512-nQHzwEKwPUFsGd7oecBCrBq1Li6CCkt5Xf+dsDx2JH+7AcTAUj032/5jhnoTCk8CQ1TGvIn7PeaX6bucaOHlYw==
+olo-react-scripts@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/olo-react-scripts/-/olo-react-scripts-0.0.4.tgz#68d1a217ab1b13afba2894b2e12981479a0999cc"
+  integrity sha512-yhL0DSbbQMV36aE6C6fYhUebo7XWv2Cg7CnHDbZwC6/iB+NhtDyFMeNkOYYnreNHaUM20BhoCNviFhdyCG+RyA==
   dependencies:
     "@babel/core" "7.8.4"
     "@svgr/webpack" "4.3.3"
